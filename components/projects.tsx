@@ -66,7 +66,7 @@ export function Projects() {
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="inline-block border border-border px-2.5 py-0.5 font-mono text-[10px] tracking-wider uppercase text-muted-foreground"
+                      className="inline-block border border-border px-2.5 py-0.5 font-mono text-[10px] tracking-wider uppercase text-muted-foreground hover:text-foreground"
                     >
                       {tag}
                     </span>
@@ -79,12 +79,12 @@ export function Projects() {
                        href={project.github}
                        target="_blank"
                        rel="noopener noreferrer"
-                       className="flex items-center gap-1.5 font-mono text-xs text-muted-foreground transition-colors hover:text-white"
+                       className="flex items-center gap-1.5 font-mono text-xs text-muted-foreground transition-colors hover:text-foreground"
                        aria-label={`Ver codigo de ${project.title}`}
                      >
                        <HugeiconsIcon
                              icon={GithubIcon}
-                             size={16}
+                             size={20}
                              color="currentColor"
                              strokeWidth={1.5}
                              />
@@ -96,10 +96,10 @@ export function Projects() {
                       href={project.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-1.5 font-mono text-xs text-muted-foreground transition-colors hover:text-white"
+                      className="flex items-center gap-1.5 font-mono text-xs text-muted-foreground transition-colors hover:text-foreground"
                       aria-label={`Ver demo de ${project.title}`}
                     >
-                      <ArrowUpRight className="h-3.5 w-3.5" />
+                      <ArrowUpRight className="h-5 w-5" />
                       Demo
                     </a>
                   )}

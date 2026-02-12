@@ -1,7 +1,9 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Menu, X } from "lucide-react"
+import { HugeiconsIcon } from "@hugeicons/react"
+import { Sun03Icon, MoonIcon } from "@hugeicons/core-free-icons"
 
 const navLinks = [
   { label: "Experiencia", href: "#experience" },
@@ -12,8 +14,25 @@ const navLinks = [
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [theme, setTheme] = useState<"dark" | "light">("dark")
   const tittle = "Frey."
   const lastChar = "_"
+
+  
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme") as "dark" | "light" | null
+    if (savedTheme) {
+      setTheme(savedTheme)
+      document.documentElement.classList.toggle("light", savedTheme === "light")
+    }
+  }, [])
+
+  const toggleTheme = () => {
+    const newTheme = theme === "dark" ? "light" : "dark"
+    setTheme(newTheme)
+    localStorage.setItem("theme", newTheme)
+    document.documentElement.classList.toggle("light", newTheme === "light")
+  }
   
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
@@ -34,17 +53,45 @@ export function Header() {
                 </a>
               </li>
             ))}
+            <li>
+              <button
+                onClick={toggleTheme}
+                className="text-muted-foreground transition-colors hover:text-foreground flex items-center"
+                aria-label={theme === "dark" ? "Cambiar a modo claro" : "Cambiar a modo oscuro"}
+              >
+                <HugeiconsIcon 
+                  icon={theme === "dark" ? Sun03Icon : MoonIcon} 
+                  size={20} 
+                  color="currentColor" 
+                  strokeWidth={1.5} 
+                />
+              </button>
+            </li>
           </ul>
         </nav>
 
-        <button
-          type="button"
-          className="md:hidden text-muted-foreground hover:text-foreground transition-colors"
-          onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label={mobileOpen ? "Cerrar menú" : "Abrir menú"}
-        >
-          {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
+        <div className="flex items-center gap-4 md:hidden">
+          <button
+            onClick={toggleTheme}
+            className="text-muted-foreground transition-colors hover:text-foreground"
+            aria-label={theme === "dark" ? "Cambiar a modo claro" : "Cambiar a modo oscuro"}
+          >
+            <HugeiconsIcon 
+              icon={theme === "dark" ? Sun03Icon : MoonIcon} 
+              size={20} 
+              color="currentColor" 
+              strokeWidth={1.5} 
+            />
+          </button>
+          <button
+            type="button"
+            className="text-muted-foreground hover:text-foreground transition-colors"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label={mobileOpen ? "Cerrar menú" : "Abrir menú"}
+          >
+            {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+        </div>
       </div>
 
       {mobileOpen && (

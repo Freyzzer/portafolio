@@ -52,7 +52,7 @@ export function Experience() {
                   {exp.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="inline-block border border-border px-2.5 py-0.5 font-mono text-[10px] tracking-wider uppercase text-muted-foreground"
+                      className="inline-block border border-border px-2.5 py-0.5 font-mono text-[10px] tracking-wider uppercase text-muted-foreground hover:text-foreground"
                     >
                       {tag}
                     </span>

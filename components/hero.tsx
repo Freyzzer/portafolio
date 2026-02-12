@@ -21,7 +21,7 @@ export function Hero() {
         <div className="mt-12 flex items-center gap-6">
           <a
             href="#projects"
-            className="inline-flex items-center gap-2 border border-foreground bg-foreground px-6 py-3 font-mono text-xs uppercase tracking-widest text-background transition-colors hover:bg-transparent hover:text-foreground"
+            className="inline-flex  items-center gap-2 border border-foreground bg-accent-foreground px-6 py-3 font-mono text-xs uppercase tracking-widest text-texto transition-colors hover:bg-transparent hover:text-foreground"
           >
             Ver Proyectos
           </a>

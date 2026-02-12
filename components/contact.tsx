@@ -153,7 +153,7 @@ export function Contact() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-muted-foreground transition-colors hover:text-white"
+                  className="text-muted-foreground transition-colors hover:text-foreground"
                   aria-label={social.label}
                 >
                   <HugeiconsIcon
