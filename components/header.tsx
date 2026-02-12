@@ -12,12 +12,14 @@ const navLinks = [
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
-
+  const tittle = "Frey."
+  const lastChar = "_"
+  
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
-      <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
-        <a href="#" className="font-mono text-sm tracking-widest uppercase text-foreground">
-          Portafolio
+      <div className="mx-auto flex max-w-5xl items-center justify-between py-4">
+        <a href="#" className="font-mono text-xl tracking-widest uppercase text-foreground">
+          {tittle}<span className="text-muted-foreground animate-pulse">{lastChar}</span>
         </a>
 
         <nav className="hidden md:block" aria-label="Navegación principal">
