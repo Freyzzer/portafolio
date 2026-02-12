@@ -1,4 +1,7 @@
-import { ArrowUpRight, Github } from "lucide-react"
+import { GithubIcon} from "@hugeicons/core-free-icons"
+import { HugeiconsIcon } from '@hugeicons/react';
+import { ArrowUpRight } from "lucide-react"
+
 
 const projects = [
   {
@@ -79,7 +82,12 @@ export function Projects() {
                       className="flex items-center gap-1.5 font-mono text-xs text-muted-foreground transition-colors hover:text-foreground"
                       aria-label={`Ver codigo de ${project.title}`}
                     >
-                      <Github className="h-3.5 w-3.5" />
+                      <HugeiconsIcon
+                            icon={GithubIcon}
+                            size={24}
+                            color="#ffffff"
+                            strokeWidth={1.5}
+                            />
                       Codigo
                     </a>
                   )}

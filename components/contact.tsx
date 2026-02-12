@@ -1,13 +1,22 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Github, Linkedin, Mail } from "lucide-react"
+import { useState } from "react";
+import { HugeiconsIcon } from "@hugeicons/react";
+import {
+  GithubIcon,
+  Linkedin02Icon,
+  Mail01Icon,
+} from "@hugeicons/core-free-icons";
 
 const socials = [
-  { label: "GitHub", href: "https://github.com/Freyzzer", icon: Github },
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/freyzzer-george-valencia-murillo-b891951aa/", icon: Linkedin },
-  { label: "Email", href: "mailto:freyzzergvm12@gmail.com", icon: Mail },
-]
+  { label: "GitHub", href: "https://github.com/Freyzzer", icon: GithubIcon },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/freyzzer-george-valencia-murillo-b891951aa/",
+    icon: Linkedin02Icon,
+  },
+  { label: "Email", href: "mailto:freyzzergvm12@gmail.com", icon: Mail01Icon },
+];
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -15,15 +24,18 @@ export function Contact() {
     email: "",
     company: "",
     message: "",
-  })
+  });
 
-  const isFormValid = formData.name.trim() !== "" && 
-                      formData.email.trim() !== "" && 
-                      formData.message.trim() !== ""
+  const isFormValid =
+    formData.name.trim() !== "" &&
+    formData.email.trim() !== "" &&
+    formData.message.trim() !== "";
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }))
-  }
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
 
   return (
     <section id="contact" className="py-32 px-6">
@@ -36,17 +48,21 @@ export function Contact() {
           </div>
           <div>
             <p className="text-2xl font-light leading-relaxed text-foreground md:text-3xl text-balance">
-              ¿Interesado en trabajar juntos? Complete el formulario y me pondré en contacto con usted.
+              ¿Interesado en trabajar juntos? Complete el formulario y me pondré
+              en contacto con usted.
             </p>
 
-            <form 
-              action="https://formspree.io/f/xnjbpvqr" 
+            <form
+              action="https://formspree.io/f/xnjbpvqr"
               method="POST"
               className="mt-12 space-y-6"
             >
               <div className="grid gap-6 sm:grid-cols-2">
                 <div className="space-y-2">
-                  <label htmlFor="name" className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
+                  <label
+                    htmlFor="name"
+                    className="font-mono text-xs uppercase tracking-widest text-muted-foreground"
+                  >
                     Nombre
                   </label>
                   <input
@@ -61,7 +77,10 @@ export function Contact() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <label htmlFor="email" className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
+                  <label
+                    htmlFor="email"
+                    className="font-mono text-xs uppercase tracking-widest text-muted-foreground"
+                  >
                     Email
                   </label>
                   <input
@@ -76,9 +95,12 @@ export function Contact() {
                   />
                 </div>
               </div>
-              
+
               <div className="space-y-2">
-                <label htmlFor="company" className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
+                <label
+                  htmlFor="company"
+                  className="font-mono text-xs uppercase tracking-widest text-muted-foreground"
+                >
                   Empresa
                 </label>
                 <input
@@ -93,7 +115,10 @@ export function Contact() {
               </div>
 
               <div className="space-y-2">
-                <label htmlFor="message" className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
+                <label
+                  htmlFor="message"
+                  className="font-mono text-xs uppercase tracking-widest text-muted-foreground"
+                >
                   Mensaje
                 </label>
                 <textarea
@@ -112,8 +137,8 @@ export function Contact() {
                 type="submit"
                 disabled={!isFormValid}
                 className={`inline-flex items-center gap-2 border px-8 py-3 font-mono text-xs uppercase tracking-widest transition-colors ${
-                  isFormValid 
-                    ? "border-foreground bg-foreground text-background hover:bg-transparent hover:text-foreground cursor-pointer" 
+                  isFormValid
+                    ? "border-foreground bg-foreground text-background hover:bg-transparent hover:text-foreground cursor-pointer"
                     : "border-muted-foreground bg-muted-foreground/20 text-muted-foreground cursor-not-allowed"
                 }`}
               >
@@ -131,7 +156,12 @@ export function Contact() {
                   className="text-muted-foreground transition-colors hover:text-foreground"
                   aria-label={social.label}
                 >
-                  <social.icon className="h-5 w-5" />
+                  <HugeiconsIcon
+                    icon={social.icon}
+                    size={24}
+                    color="#ffffff"
+                    strokeWidth={1.5}
+                  />
                 </a>
               ))}
             </div>
@@ -139,5 +169,5 @@ export function Contact() {
         </div>
       </div>
     </section>
-  )
+  );
 }

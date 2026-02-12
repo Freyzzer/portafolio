@@ -1,9 +1,10 @@
-import { Github, Linkedin, Mail, Twitter } from "lucide-react"
+import { HugeiconsIcon } from '@hugeicons/react';
+import { GithubIcon, Linkedin02Icon, Mail01Icon  } from '@hugeicons/core-free-icons';
 
 const socials = [
-  { label: "GitHub", href: "https://github.com/Freyzzer", icon: Github },
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/freyzzer-george-valencia-murillo-b891951aa/", icon: Linkedin },
-  { label: "Email", href: "mailto:freyzzergvm12@gmail.com", icon: Mail },
+  { label: "GitHub", href: "https://github.com/Freyzzer", icon: GithubIcon },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/freyzzer-george-valencia-murillo-b891951aa/", icon: Linkedin02Icon },
+  { label: "Email", href: "mailto:freyzzergvm12@gmail.com", icon: Mail01Icon },
 ]
 
 export default function SocialMedia() {
@@ -19,7 +20,12 @@ export default function SocialMedia() {
                         className="text-muted-foreground transition-all duration-300 hover:text-foreground hover:-translate-y-1"
                         aria-label={social.label}
                     >
-                        <social.icon className="h-5 w-5" />
+                        <HugeiconsIcon
+                            icon={social.icon}
+                            size={24}
+                            color="#ffffff"
+                            strokeWidth={1.5}
+                            />
                     </a>
                 ))}
             </ul>
