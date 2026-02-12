@@ -10,7 +10,7 @@ const projects = [
       "Aplicación web de ecommerce desarrollada como proyecto práctico para fortalecer habilidades en desarrollo frontend y manejo de estado. La plataforma permite a los usuarios explorar productos, aplicar filtros avanzados y gestionar un carrito de compras con autenticación de usuario.",
     tags: ["Next.js", "TypeScript", "Tailwind CSS"],
     github: "https://github.com/Freyzzer/shopewave-web",
-    live: "https://shopewave-2ojy1xa5k-freyzzers-projects.vercel.app/",
+    live: "https://shopewave-web.vercel.app/",
   },
   {
     title: "Admin panel",
@@ -18,7 +18,7 @@ const projects = [
       "Panel administrativo desarrollado para gestionar clientes, planes y pagos de servicios de streaming. El proyecto nació como solución a una necesidad personal, pero fue diseñado con arquitectura escalable y estructura modular para adaptarse a múltiples tipos de servicios.",
     tags: ["Next.js", "Tailwind CSS", "prisma", "supabase", "TypeScript"],
      github: "https://github.com/Freyzzer/admin-panel",
-    live: "https://admin-panel-6au4qcrpt-freyzzers-projects.vercel.app",
+    live: "https://admin-panel-lovat-sigma.vercel.app",
   },
 ]
 
