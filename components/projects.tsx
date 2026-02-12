@@ -73,30 +73,30 @@ export function Projects() {
                   ))}
                 </div>
 
-               <div className="flex items-center gap-4">
-                  {project.github && (
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-1.5 font-mono text-xs text-muted-foreground transition-colors hover:text-foreground"
-                      aria-label={`Ver codigo de ${project.title}`}
-                    >
-                      <HugeiconsIcon
-                            icon={GithubIcon}
-                            size={24}
-                            color="#ffffff"
-                            strokeWidth={1.5}
-                            />
-                      Codigo
-                    </a>
-                  )}
+                <div className="flex items-center gap-4">
+                   {project.github && (
+                     <a
+                       href={project.github}
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       className="flex items-center gap-1.5 font-mono text-xs text-muted-foreground transition-colors hover:text-white"
+                       aria-label={`Ver codigo de ${project.title}`}
+                     >
+                       <HugeiconsIcon
+                             icon={GithubIcon}
+                             size={16}
+                             color="currentColor"
+                             strokeWidth={1.5}
+                             />
+                       Codigo
+                     </a>
+                   )}
                   {project.live && (
                     <a
                       href={project.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-1.5 font-mono text-xs text-muted-foreground transition-colors hover:text-foreground"
+                      className="flex items-center gap-1.5 font-mono text-xs text-muted-foreground transition-colors hover:text-white"
                       aria-label={`Ver demo de ${project.title}`}
                     >
                       <ArrowUpRight className="h-3.5 w-3.5" />

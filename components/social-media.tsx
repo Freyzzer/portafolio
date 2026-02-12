@@ -17,13 +17,13 @@ export default function SocialMedia() {
                         href={social.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-muted-foreground transition-all duration-300 hover:text-foreground hover:-translate-y-1"
+                        className="group text-muted-foreground transition-all duration-300 hover:text-white hover:-translate-y-1"
                         aria-label={social.label}
                     >
                         <HugeiconsIcon
                             icon={social.icon}
-                            size={24}
-                            color="#ffffff"
+                            size={16}
+                            color="currentColor"
                             strokeWidth={1.5}
                             />
                     </a>

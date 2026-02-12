@@ -153,13 +153,13 @@ export function Contact() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-muted-foreground transition-colors hover:text-foreground"
+                  className="text-muted-foreground transition-colors hover:text-white"
                   aria-label={social.label}
                 >
                   <HugeiconsIcon
                     icon={social.icon}
-                    size={24}
-                    color="#ffffff"
+                    size={16}
+                    color="currentColor"
                     strokeWidth={1.5}
                   />
                 </a>
