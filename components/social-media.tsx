@@ -9,7 +9,7 @@ const socials = [
 
 export default function SocialMedia() {
     return(
-        <div className="fixed bottom-0 left-20 flex flex-col items-center gap-5 after:content-[''] after:block after:w-px after:h-28 after:bg-muted-foreground">
+        <div className="fixed bottom-0 left-20 flex flex-col items-center gap-5 after:content-[''] after:block after:w-px after:h-28 after:bg-muted-foreground max-[799px]:hidden">
             <ul className="flex flex-col gap-4">
                 {socials.map((social) => (
                     <a

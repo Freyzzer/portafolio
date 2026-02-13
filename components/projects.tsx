@@ -44,7 +44,7 @@ export function Projects() {
           {projects.map((project, i) => (
             <div
               key={project.title}
-              className="group border-t flex flex-col items-end border-border py-10 -mx-6 px-6 transition-colors hover:bg-accent/30"
+              className="group border-t flex flex-col items-end border-border py-10 -mx-6 px-6 transition-colors hover:bg-accent/30 max-sm:grid"
             >
               <div className="flex flex-col gap-4 md:flex-row md:items-start md:gap-12 mb-5">
                 <div className="flex shrink-0 items-baseline gap-4 md:w-52">
@@ -61,7 +61,7 @@ export function Projects() {
                 </p>
               </div>
 
-              <div className="mt-5 flex flex-col gap-20  md:ml-56 md:flex-row md:items-center md:justify-end">
+              <div className="mt-5 flex flex-col gap-20 max-sm:gap-10  md:ml-56 md:flex-row md:items-center md:justify-end ">
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
                     <span

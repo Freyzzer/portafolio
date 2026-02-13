@@ -36,7 +36,7 @@ export function Header() {
   
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
-      <div className="mx-auto flex max-w-5xl items-center justify-between py-4">
+      <div className="mx-auto flex max-w-5xl items-center justify-between py-4 max-sm:px-6 sm:px-6 lg:px-0">
         <a href="#" className="font-mono text-xl tracking-widest uppercase text-foreground">
           {tittle}<span className="text-muted-foreground animate-pulse">{lastChar}</span>
         </a>
