@@ -5,18 +5,17 @@ export function Hero() {
     <section className="relative flex min-h-screen flex-col justify-center px-6">
       <div className="mx-auto w-full max-w-5xl">
         <p className="font-mono text-xs tracking-widest uppercase text-muted-foreground mb-6">
-          Desarrollador Frontend
+          Desarrollador Fullstack
         </p>
         <h1 className="text-4xl font-light leading-tight tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-7xl text-balance">
-          Creando <em className="font-serif italic text-muted-foreground">interfaces</em>.{" "}
+          Creando <em className="font-serif italic text-muted-foreground">soluciones completas</em>.{" "}
           <br className="hidden sm:block" />
-          Construyendo software pulido{" "}
+          Construyendo software robusto{" "}
           <br className="hidden sm:block" />
-          y experiencias web.
+          y experiencias digitales de extremo a extremo.
         </h1>
         <p className="mt-8 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
-          Diseño y desarrollo productos digitales reflexivos con un enfoque en código
-          limpio, interacciones suaves y atención pixel perfecta al detalle.
+          Diseño y desarrollo productos digitales funcionales y escalables, desde el frontend hasta el backend, con un enfoque en código limpio, rendimiento óptimo e interacciones fluidas.
         </p>
         <div className="mt-12 flex items-center gap-6">
           <a

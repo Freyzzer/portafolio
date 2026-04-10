@@ -2,6 +2,8 @@ const skills = [
   "React",
   "Angular",
   "Next.js",
+  ".Net",
+  "Java",
   "TypeScript",
   "Tailwind CSS",
   "Node.js",
@@ -22,22 +24,27 @@ export function About() {
           </div>
           <div>
             <p className="text-lg leading-relaxed text-foreground md:text-xl">
-              Soy Desarrollador Frontend con experiencia en Angular, React y
-              TypeScript, especializado en la creación de interfaces modernas,
-              rápidas y centradas en la experiencia del usuario para
-              aplicaciones web y móviles.
+              Soy Desarrollador Full Stack con experiencia en Angular, React,
+              Next.js, .Net, java y TypeScript, enfocado en la creación de
+              aplicaciones web completas, modernas y escalables, cuidando tanto
+              la experiencia del usuario como la lógica del backend.
             </p>
             <p className="mt-6 text-base leading-relaxed text-muted-foreground">
-              Cuento con experiencia en el desarrollo de componentes
-              reutilizables, integración de APIs REST y aplicación de buenas
-              prácticas como clean code, diseño responsive y accesibilidad. Me
-              caracterizo por mi enfoque en la mejora continua, la colaboración
-              efectiva en equipo y la búsqueda constante de crecimiento
-              profesional a través de proyectos reales de alto impacto.
+              Cuento con experiencia en el desarrollo de interfaces intuitivas,
+              construcción de APIs REST, manejo de bases de datos y creación de
+              arquitecturas eficientes. Aplico buenas prácticas como clean code,
+              diseño responsive, accesibilidad y optimización del rendimiento en
+              todo el ciclo de desarrollo.
+              
+               Me caracterizo por mi enfoque en la
+              mejora continua, la resolución de problemas y la colaboración
+              efectiva en equipo, buscando siempre aportar valor en proyectos
+              reales de alto impacto.
             </p>
             <p className="mt-6 text-base leading-relaxed text-muted-foreground">
-              Cuando no estoy programando, me encontrarás jugando videojuegos, aprendiendo desarrollo de videojuegos o
-              explorando nuevas tecnologías.
+              Cuando no estoy programando, me encontrarás jugando videojuegos,
+              aprendiendo desarrollo de videojuegos o explorando nuevas
+              tecnologías.
             </p>
 
             <div className="mt-12">
